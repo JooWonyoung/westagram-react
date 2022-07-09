@@ -1,8 +1,6 @@
 import './Main.scss';
 import { useState } from 'react';
-import love from '../../assets/images/love.png'
-import liked from '../../assets/images/liked.png'
-import Comment from '../../components/comment'
+import Comments from '../../components/Comments'
 
 
 
@@ -31,10 +29,7 @@ const Stories = () => {
 
 const Feed = () => {
 
-
   return (
-    <div className='main-container'>
-      <Stories></Stories>
       <div className='feed-main-container'>
         <div className='feed-header'>
           <div className='profile-feed-section'>
@@ -83,9 +78,8 @@ const Feed = () => {
           <a className='userOfFeed'>ore.zeno</a>보문역에 위치한 카페 공유...{' '}
           <a id='more'>더 보기</a>
         </div>
-        <Comment />
+        <Comments />
       </div>
-    </div>
   );
 };
 
@@ -253,7 +247,11 @@ function Main() {
 
       <main>
         <div className='total-container'>
-          <Feed></Feed>
+          <div className='main-container'>
+            <Stories></Stories>
+            <Feed></Feed>
+            <Feed></Feed>
+          </div>
           <Aside></Aside>
         </div>
       </main>

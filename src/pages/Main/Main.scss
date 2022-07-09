@@ -39,7 +39,7 @@ $background-color: #fafafa;
     }
 
     .westagram-logo-main {
-      font-family: "Lobster", cursive;
+      font-family: 'Lobster', cursive;
       font-size: 30px;
       flex: 4;
     }
@@ -96,7 +96,6 @@ $background-color: #fafafa;
 
   main {
     width: 100vw;
-    height: 130vh;
     background-color: $background-color;
 
     .total-container {
@@ -281,46 +280,48 @@ $background-color: #fafafa;
           }
 
           .feed-comment {
-            @include flex(flex-start, center, null);
-            flex-wrap: wrap;
-            width: 470px;
-            height: auto;
             margin-top: 8px;
-            padding-left: 15px;
-            font-size: 14px;
-
-            .userOfComment {
-              padding: 0 5px 5px 0;
+            .comment-container {
+              @include flex(flex-start, center, null);
+              flex-wrap: wrap;
+              width: 470px;
+              height: auto;
+              padding-left: 15px;
               font-size: 14px;
-              font-weight: 650;
-            }
 
-            .commentOfUser {
-              padding: 0 5px 5px 0;
-              width: 353px;
-            }
-
-            .comment-like {
-              width: 12px;
-              height: 12px;
-              margin: 2px;
-              background-size: cover;
-              background-image: url(../../../public/images/love.png);
-
-              &:hover {
-                cursor: pointer;
+              .userOfComment {
+                padding: 0 5px 5px 0;
+                font-size: 14px;
+                font-weight: 650;
               }
-            }
 
-            .comment-delete {
-              width: 12px;
-              height: 12px;
-              margin: 2px;
-              background-size: cover;
-              background-image: url(../../../public/images/delete.png);
+              .commentOfUser {
+                padding: 0 5px 5px 0;
+                width: 353px;
+              }
 
-              &:hover {
-                cursor: pointer;
+              .comment-like {
+                width: 12px;
+                height: 12px;
+                margin: 2px;
+                background-size: cover;
+                background-image: url(../../../public/images/love.png);
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+
+              .comment-delete {
+                width: 12px;
+                height: 12px;
+                margin: 2px;
+                background-size: cover;
+                background-image: url(../../../public/images/delete.png);
+
+                &:hover {
+                  cursor: pointer;
+                }
               }
             }
           }
