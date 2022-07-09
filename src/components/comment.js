@@ -20,17 +20,14 @@ const Comment = () => {
       e.preventDefault();
       cmnt = e.target.text.value
         
-      let newlist =  commentFormat.map((object)=>{
-        <span key={object.id} className={object.className}>{object.contents}</span>
-        })
-        
-        console.log(newlist)
-        
-      setCmntList([...cmntList, newlist[0],newlist[1],newlist[2],newlist[3]])
-    //   <span className='userOfComment'>ore.zeno</span>,
-    //   <span className='commentOfUser'>{e.target.text.value}</span>,
-    //   <button className='comment-like'></button>,
-    //   <button className='comment-delete'></button>])
+      // let newlist =  commentFormat.map((object)=>{
+      //   <span key={object.id} className={object.className}>{object.contents}</span>
+      //   })
+      setCmntList([...cmntList,
+      <span className='userOfComment'>ore.zeno</span>,
+      <span className='commentOfUser'>{e.target.text.value}</span>,
+      <button className='comment-like'></button>,
+      <button className='comment-delete'></button>])
       e.target.text.value = '';
       setOnbutton(true)
     };
